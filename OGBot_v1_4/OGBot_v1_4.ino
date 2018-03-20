@@ -231,6 +231,34 @@ void ogc_serialprocess(){
     ogc_msg("On ALERT!");    
     ogc_changemode(5); 
    }
+   if(OGBot_mode==0){
+     switch(serialin){
+       case "8":
+         //start driving forward
+       break;
+       case "4":
+         //turn left
+       break;
+       case "5":
+         //stop
+       break;
+       case "6":
+         //turn right
+       break;
+       case "2":
+         //drive back
+       break;
+       case "7":
+         //playtone1
+       break;
+       case "9":
+         //playtone2
+       break;
+       case "1":
+         //led/aux
+       break;
+     } 
+   }
 }
 void ogc_changemode(int m){
   OGBot_mode=m;
